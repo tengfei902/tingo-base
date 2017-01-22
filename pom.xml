@@ -9,8 +9,6 @@
 
 	<properties>
 		<junit.version>4.11</junit.version>
-		<jersey.version>2.23</jersey.version>
-		<fastjson.version>1.2.14</fastjson.version>
 		<spring.version>4.3.2.RELEASE</spring.version>
 		<druid.version>1.0.23</druid.version>
 		<servlet.version>3.0.1</servlet.version>
@@ -35,48 +33,26 @@
 	</properties>
 
 	<dependencies>
+		<!-- config for test -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.containers/jersey-container-servlet -->
 		<dependency>
-			<groupId>org.glassfish.jersey.containers</groupId>
-			<artifactId>jersey-container-servlet</artifactId>
-			<version>${jersey.version}</version>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+			<scope>test</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.glassfish.jersey.ext</groupId>
-			<artifactId>jersey-spring3</artifactId>
-			<version>${jersey.version}</version>
-			<exclusions>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring-core</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring-web</artifactId>
-				</exclusion>
-				<exclusion>
-					<groupId>org.springframework</groupId>
-					<artifactId>spring-beans</artifactId>
-				</exclusion>
-			</exclusions>
-		</dependency>
+
 		<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>${servlet.version}</version>
 			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.alibaba</groupId>
-			<artifactId>fastjson</artifactId>
-			<version>${fastjson.version}</version>
 		</dependency>
 
 		<dependency>
@@ -163,17 +139,6 @@
 			<groupId>commons-logging</groupId>
 			<artifactId>commons-logging</artifactId>
 			<version>${common-logging.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.nonobank.architecture</groupId>
-			<artifactId>nono-mq-client</artifactId>
-			<version>${nono-mq-client.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>com.nonobank.architecture</groupId>
-			<artifactId>jersey-support</artifactId>
-			<version>${jersey-support.version}</version>
 		</dependency>
 	</dependencies>
 
