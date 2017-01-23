@@ -32,6 +32,19 @@
 		</mybaits.generator.properties.url>
 	</properties>
 
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Micaicms Releases</name>
+			<url>http://127.0.0.1:8081/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Micaicms Releases</name>
+			<url>http://127.0.0.1:8081/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
 	<dependencies>
 		<!-- config for test -->
 		<dependency>
